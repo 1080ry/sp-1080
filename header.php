@@ -12,8 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <!--CSS-->
-    <link href="
-    <?php bloginfo('template_url'); ?>/css/sp-style.css" rel="stylesheet" >
+    <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
     <!--googlefont-->
     <link href='http://fonts.googleapis.com/css?family=Passion+One:700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:600italic' rel='stylesheet' type='text/css'>
@@ -21,9 +20,8 @@
     <link href="
     <?php bloginfo('template_url'); ?>/css/font-awesome.min.css" rel="stylesheet">
     <!-- favicon -->
-    <link rel="shortcut icon" href="
-    <?php bloginfo('template_url'); ?>/favicon.ico">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <?php wp_head()?>
   </head>
   <body>
