@@ -63,7 +63,7 @@
         </div>
       </footer>
     </div>
-    <script><src="<?php bloginfo('template_url'); ?>/js/sp-1080.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/sp-1080.js"></script>
     <!-- sns -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
