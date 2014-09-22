@@ -1,4 +1,4 @@
-function() {
+$(function() {
         var a = $("#menu");
         $(".menu_btn").click(function() {
             $(this).toggleClass("active"), a.slideToggle(300)
@@ -6,4 +6,4 @@ function() {
             return $(this).hide(), $("#category_list li:hidden").slideDown(), !
                 1
         })
-    }
+    })
