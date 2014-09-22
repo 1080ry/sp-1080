@@ -1,4 +1,4 @@
-<?php get_template_part( 'header' ); ?>
+<?php get_header(); ?>
       <div class="special">
         <a href="#" class="btn">
           <img src="<?php bloginfo('template_url'); ?>/img/sp/special.jpg" alt="スペシャル">
@@ -72,7 +72,7 @@
           <p>スポンサーリンク</p>
 <img src="http://placehold.it/300x250">
         </div>
-<?php get_template_part( 'footer' ); ?>
+<?php get_footer(); ?>
   </body>
 <script type="text/javascript">
 $(function() {
