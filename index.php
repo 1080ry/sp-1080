@@ -1,7 +1,7 @@
 <?php get_header(); ?>
       <div class="special">
         <a href="#" class="btn">
-          <img src="<?php bloginfo('template_url'); ?>/img/sp/special.jpg" alt="スペシャル">
+          <img src="<?php bloginfo('template_url'); ?>/img/special.jpg" alt="スペシャル">
         </a>
       </div>
       <div class="entry-list">
@@ -73,16 +73,5 @@
 <img src="http://placehold.it/300x250">
         </div>
 <?php get_footer(); ?>
-  </body>
-<script type="text/javascript">
-$(function() {
-        var a = $("#menu");
-        $(".menu_btn").click(function() {
-            $(this).toggleClass("active"), a.slideToggle(300)
-        }), $("#list_more").on("click", function() {
-            return $(this).hide(), $("#category_list li:hidden").slideDown(), !
-                1
-        })
-    })
-</script>
+</body>
 </html>
