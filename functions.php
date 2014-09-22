@@ -1,64 +1,10 @@
 <?php
 //ウィジェット
-//sidebarにclass名追加
-register_sidebar(array(
-  'name'=>'サイドバー1',
-  'id' => 'sidebar1',
-  'before_widget'=>'<div class="sidebar-wrapper">',
-  'after_widget'=>'</div>',
-  'before_title' => '<h2 class="sidebar-title">',
-  'after_title' => '</h2>'
-));
-
-register_sidebar(array(
-  'name'=>'サイドバー2',
-  'id' => 'sidebar2',
-  'before_widget'=>'<div class="sidebar-wrapper">',
-  'after_widget'=>'</div>',
-  'before_title' => '<h2 class="sidebar-title">',
-  'after_title' => '</h2>'
-));
-
 //カテゴリーの投稿数をaタグの中に移動させる
 add_filter( 'wp_list_categories', 'my_list_categories', 10, 2 );
 function my_list_categories( $output, $args ) {
   $output = preg_replace('/<\/a>\s*\((\d+)\)/',' <span class="post-count">$1</span></a>',$output);
   return $output;
-}
-
-//受信したコメント
-function mydesign($comment, $args, $depth) {
-$GLOBALS['comment'] = $comment; ?>
-
-<li class="compost">
-<?php comment_text(); ?>
-<p class="cominfo">
-<?php comment_date(); ?> <?php comment_time(); ?>
- |
-<?php comment_author_link(); ?>
-</p>
-
-<?php
-}
-
-//コメント欄のデフォルト文言削除
-add_filter('comment_form_default_fields', 'mytheme_remove_url');
-function mytheme_remove_url($arg) {
-    $arg['url'] = '';
-        $arg['email'] = '';
-    return $arg;
-}
-
-add_filter( "comment_form_defaults", "my_comment_notes_before");
-function my_comment_notes_before( $defaults){
-    $defaults['comment_notes_before'] = '';
-    return $defaults;
-}
-
-add_filter("comment_form_defaults","my_special_comment_after");
-function my_special_comment_after($args){
-    $args['comment_notes_after'] = '';
-return $args;
 }
 
 //wp_head()不要タグ削除
@@ -86,6 +32,7 @@ add_filter( 'get_search_form', 'my_search_form' );
 //アイキャッチ
 add_theme_support( 'post-thumbnails', array( 'post' ) );
 set_post_thumbnail_size( 210, 140, true );
+
 //スマホサイト用のアイキャッチ105x70サイズ
 add_image_size( 'spicatch', 105, 70, true );
 
@@ -105,20 +52,6 @@ function max_show_page_number() {
     $max_page = $wp_query->max_num_pages;
     echo $max_page;
 }
-
-// テーマのタグクラウドのパラメータ変更
-function my_tag_cloud_filter($args) {
-    $myargs = array(
-        'smallest' => 12, // 最小文字サイズは 10pt
-        'largest' => 12, // 最大文字サイズは 10pt
-        'number' => 30,  // 一度に表示するのは30タグまで
-        'order' => 'RAND', // 表示順はランダムで
-    );
-    return $myargs;
-}
-add_filter('widget_tag_cloud_args', 'my_tag_cloud_filter');
-
-
 // ソーシャルボタン
 function SocialButtonVertical()
 { ?>
