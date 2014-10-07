@@ -29,7 +29,7 @@
       <div class="no-script">サイトを快適に利用するためには、JavaScriptを有効にしてください。</div>
     </noscript>
     <div class="wrapper">
-      <nav id="menu">
+      <nav id="menu" name="#menu">
         <ul>
           <li>
             <a href=""><i class="fa fa-angle-right"></i> カテゴリ</a>
@@ -76,7 +76,7 @@
       </div>
       <?php endif; ?>
       <header class="header">
-        <h1 class="logo">
+        <h1 class="logo" id="logo">
           <a href="<?php bloginfo('url'); ?>">
             <img src="<?php bloginfo('template_url'); ?>/img/logo.png" width="75" height="40" alt="ロゴ">
           </a>
