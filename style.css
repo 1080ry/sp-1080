@@ -87,7 +87,7 @@ iframe {
   float: right;
   display: block;
   cursor: pointer;
-  background: url(http://portfolio.tank.jp/gogo/wp-content/themes/sp-1080-master/img/menu_btn.png) left top no-repeat;
+  background: url(./img/menu_btn.png) left top no-repeat;
   background-size: 135px 58px;
   -webkit-tap-highlight-color: transparent
 }
@@ -121,7 +121,7 @@ iframe {
   padding: 10px 35px 0 10px;
   zoom: 1;
   border-bottom: #bebebe 1px solid;
-  background: url(../img/icon_arrow.png) right center no-repeat #fff;
+  background: url(./img/icon_arrow.png) right center no-repeat #fff;
   background-size: 25px 18px;
   color: #333366;
   text-decoration: none
@@ -248,7 +248,7 @@ iframe {
   padding: 13px 40px 11px 15px;
   text-decoration: none;
   color: #000;
-  background: url(../img/icon_arrow.png) right center no-repeat #fff;
+  background: url(./img/icon_arrow.png) right center no-repeat #fff;
   background-size: 25px 18px;
   vertical-align: top;
   line-height: 120%;
@@ -275,7 +275,7 @@ iframe {
   border-bottom-right-radius: 10px
 }
 .footer_cat .link a {
-  background: url(../img/icon_link.png) right center no-repeat #fff;
+  background: url(./img/icon_link.png) right center no-repeat #fff;
   background-size: 32px 17px
 }
 .footer_menu ul {
@@ -382,7 +382,7 @@ iframe {
   font-size: 147%
 }
 .box-ad-line {
-  background: url(../img/line_tile02.png) left top repeat-x;
+  background: url(./img/line_tile02.png) left top repeat-x;
   background-size: 3px 10px;
   padding: 25px 0 10px;
   margin: 0 10px;
@@ -532,7 +532,7 @@ iframe {
   font-weight: 700
 }
 .content_entry h3 {
-  background: url(../img/h3-title.png) left bottom repeat-x;
+  background: url(./img/h3-title.png) left bottom repeat-x;
   background-size: 3px 13px;
   padding: 0 0 25px;
   margin: 30px 0 20px;
@@ -588,7 +588,7 @@ iframe {
 .content_entry ul li {
   margin: 0 0 1.5em;
   line-height: 140%;
-  background: url(../img/icon_circle.png) left 5px no-repeat;
+  background: url(./img/icon_circle.png) left 5px no-repeat;
   background-size: 8px 8px;
   padding: 0 0 0 20px
 }
@@ -597,11 +597,11 @@ iframe {
 }
 .content_entry ul li ul li {
   margin: 0 0 .5em;
-  background: url(../img/icon_circle2.png) left 5px no-repeat;
+  background: url(./img/icon_circle2.png) left 5px no-repeat;
   background-size: 8px 8px
 }
 .content_entry ul li ul li li {
-  background: url(../img/icon_circle3.png) left 5px no-repeat;
+  background: url(./img/icon_circle3.png) left 5px no-repeat;
   background-size: 8px 8px
 }
 .content_entry ol {
@@ -670,24 +670,6 @@ iframe {
   display: inline-block;
   vertical-align: middle;
   zoom: 1
-}
-.content_entry blockquote {
-  background: url(../img/i-block.png) 20px 20px no-repeat;
-  padding: 20px 20px 15px;
-  color: #666;
-  border: 1px dotted #999;
-  margin: 20px 0
-}
-.content_entry blockquote:before {
-  font-family: icomoon;
-  speak: none;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  color: #000;
-  content: "q";
-  padding: 0 .5em 0 0
 }
 .content_entry dt {
   position: relative;
@@ -932,4 +914,74 @@ margin: 0 auto;
   position: absolute;
   z-index: 5;
   text-indent: -9999px
+}
+
+.pagetop {
+  text-align: center;
+  position: relative;
+  margin: 20px 0 0;
+}
+.pagetop-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 13px 10px;
+  border-color: transparent transparent #333366;
+  margin: 0 auto;
+}
+.pagetop p {
+  display: block;
+  background: #333366;
+  color: #fff;
+  padding: 12px 0 10px;
+  font-size: 94%;
+}
+.pagetop a {
+  text-decoration: none!important;
+}
+.pc-switch-footer {
+  text-align: center;
+  position: relative;
+}
+.pc-switch-footer a {
+  text-decoration: none!important;
+  display: block;
+  background: #fff;
+  color: #333;
+  padding: 12px 0 10px;
+  font-size: 100%;
+  font-weight:bold;
+}
+
+.cat1 {
+  background: #993333;
+}
+.cat2{
+  background: #66cc99;
+}
+.cat3 {
+  background: #003366;
+}
+.cat4 {
+  background: #ffcc33;
+}
+.cat5 {
+  background: #99cc66;
+}
+.cat6 {
+  background: #333333;
+}
+.cat7 {
+  background: #cc3333;
+}
+/*引用_____________________________________________*/
+blockquote {
+  background: url(./img/quote.png) 20px 20px no-repeat;
+  border: 1px dotted #999;
+  margin: 5px 0;
+  position: relative;
+}
+  blockquote p{
+  color: #666;
+  padding: 40px 30px 0 30px;
 }
