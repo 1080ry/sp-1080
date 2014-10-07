@@ -36,16 +36,27 @@
                     <?php echo get_post_time('Y.m.d D'); ?>
                   </p>
                 </div>
-                <?php
- $cat = get_the_category();
- $cat = $cat[0];
- $category= $cat->cat_name;
- $catslug = $cat->slug;
- ?>
-                <div class="<?php echo $catslug; ?> cat">
-                  <p>
-                    <?php echo $category ?>
-                  </p>
+<div class="<?php
+$cats = get_the_category();
+$cat = $cats[0];
+if($cat->parent){
+$parent = get_category($cat->parent);
+echo $parent->slug;
+}else{
+echo $cat->slug;
+}
+?>
+ cat">
+       <p><?php
+$cats = get_the_category();
+$cat = $cats[0];
+if($cat->parent){
+$parent = get_category($cat->parent);
+echo $parent->cat_name;
+}else{
+echo $cat->cat_name;
+}
+?></p>
                 </div>
               </div>
               <div class="entry-h1">
